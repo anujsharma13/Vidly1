@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Vidly1.Models.Customer>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>customers Index</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Newsletter</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var customer in Model)
+        {
+        <tr>
+            <th>@customer.Name</th>
+            <th>@customer.IsSubscribedToNewsletter</th>
+           
+        </tr>
+                
+            }
+    </tbody>
+</table>
